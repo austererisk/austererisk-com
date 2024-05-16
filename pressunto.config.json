@@ -5,6 +5,12 @@
       "name": "test",
       "route": "/content",
       "template": ""
+    },
+    {
+      "id": "services",
+      "name": "Services",
+      "route": "/content/services",
+      "template": ""
     }
   ],
   "templates": []
