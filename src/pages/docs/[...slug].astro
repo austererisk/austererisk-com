@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import RootLayout from '@/lib/layouts/root/RootLayout.astro';
+import WebsiteLayout from '@/lib/layouts/website/Layout.astro';
+import {config} from '../../../config';
+import MarkdownLayout from '@/lib/layouts/markdown/MarkdownLayout.astro';
+import { docs } from '../../content';
+import PageHeader from '@/lib/components/PageHeader.astro';
+
+export async function getStaticPaths() {
+	return docs?.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'docs'>;
+
+const post = Astro.props;
+
+ const { Content } = await post.render();
+---
+
+<RootLayout {config}>
+<WebsiteLayout {config}>
+<PageHeader title={post.data.title} description={post.data.description} />
+<MarkdownLayout>
+	<Content />
+</MarkdownLayout>
+</WebsiteLayout>
+</RootLayout>

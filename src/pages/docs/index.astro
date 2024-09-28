@@ -1,0 +1,16 @@
+---
+import {config} from '../../../config';
+import RootLayout from '@/lib/layouts/root/RootLayout.astro';
+import WebsiteLayout from '@/lib/layouts/website/Layout.astro';
+import GridSection from '@/lib/components/GridSection.astro';
+import PageHeader from '@/lib/components/PageHeader.astro';
+import { docs} from '../../content';
+import CallToAction from '@/lib/components/CallToAction.astro';
+---
+<RootLayout {config}>
+<WebsiteLayout {config}>
+  <PageHeader title={config.site.collections.docs.title} description={config.site.collections.docs.description} />
+  <GridSection objects={docs} headings={false} />
+  <CallToAction {config} />
+</WebsiteLayout>
+</RootLayout>

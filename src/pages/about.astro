@@ -1,0 +1,24 @@
+---
+import {config} from '../../config';
+import RootLayout from '@/lib/layouts/root/RootLayout.astro';
+import WebsiteLayout from '@/lib/layouts/website/Layout.astro';
+import PageHeader from '@/lib/components/PageHeader.astro';
+import CallToAction from '@/lib/components/CallToAction.astro';
+import MarkdownLayout from '@/lib/layouts/markdown/MarkdownLayout.astro';
+
+import { getCollection } from 'astro:content';
+const page = await getCollection('singles', ({ data }) => {
+  return data.title === 'About';
+});
+
+const { Content } = await page[0].render();
+---
+<RootLayout {config}>
+<WebsiteLayout {config}>
+  <PageHeader title={config.site.collections.about.title} description={config.site.collections.about.description} />
+<MarkdownLayout>
+  <Content />
+</MarkdownLayout>
+  <CallToAction {config} />
+</WebsiteLayout>
+</RootLayout>

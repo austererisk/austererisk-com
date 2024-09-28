@@ -1,0 +1,18 @@
+---
+import Layout from '@/lib/layouts/website/Layout.astro';
+import {config} from '../../config';
+import GridSection from '@/lib/components/GridSection.astro';
+import PageHeader from '@/lib/components/PageHeader.astro';
+import { courses, sectors, services, products } from '../content.ts';
+import CallToAction from '@/lib/components/CallToAction.astro';
+---
+
+<Layout {config}>
+  <PageHeader title={config.site.headline} description={config.site.description} />
+   <GridSection title={config.site.collections.services.title} description={config.site.collections.services.description} objects={services} /> 
+  <GridSection title={config.site.collections.sectors.title} description={config.site.collections.sectors.description} objects={sectors}  />
+  <GridSection title={config.site.collections.courses.title} description={config.site.collections.courses.description} objects={courses}  />
+  <GridSection title={config.site.collections.products.title} description={config.site.collections.products.description} objects={products}  />
+  <CallToAction {config} />
+</Layout>
+

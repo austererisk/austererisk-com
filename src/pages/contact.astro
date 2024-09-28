@@ -1,0 +1,25 @@
+---
+import Layout from '@/lib/layouts/website/Layout.astro';
+import {config} from '../../config';
+import PageHeader from '@/lib/components/PageHeader.astro';
+---
+
+<Layout {config}>
+  <PageHeader title={config.site.cta.title} description={config.site.cta.description} />
+  <div class="socialColumn groupMd">
+    {config.company.social.map(({icon: Icon, ...social}) => {
+      return (
+        <a
+          href={social.href} 
+          aria-label={social.label} 
+          target="_blank" 
+          class="button"
+        >
+          <Icon />
+          {social.label}
+        </a>
+      );
+    })}
+  </div>
+</Layout>
+

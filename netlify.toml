@@ -1,0 +1,12 @@
+[build]
+  publish = "/apps/austererisk-com/dist"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[redirects]]
+from = "/geoteams"
+to = "/products/geoteams"
+

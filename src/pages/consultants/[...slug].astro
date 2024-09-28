@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import RootLayout from '@/lib/layouts/root/RootLayout.astro';
+import WebsiteLayout from '@/lib/layouts/website/Layout.astro';
+import {config} from '../../../config';
+import { consultants } from '../../content';
+import PageHeader from '@/lib/components/PageHeader.astro';
+import ConsultantLayout from '@/lib/layouts/consultant/ConsultantLayout.astro';
+
+export async function getStaticPaths() {
+	return consultants?.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'consultants'>;
+
+const post = Astro.props;
+---
+
+<RootLayout {config}>
+<WebsiteLayout {config}>
+<ConsultantLayout post={post} />
+</WebsiteLayout>
+</RootLayout>
