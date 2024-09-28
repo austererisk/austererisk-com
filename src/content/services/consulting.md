@@ -1,10 +1,9 @@
 ---
 title: Consulting
-description: Desktop and field services to keep your team safe and effective in the field
 ---
 
 ## Crisis Management
-Managing safety in extreme environments begins in the planning stage and continues into the field. From risk management plans to detailed mapping, to innovative offline apps and real-life first aid training, Austere can highlight and mitigate areas of concern for your wilderness activities. Our experienced wilderness risk consultants will implement dynamic, functional and achievable plans to keep your team safe and the activity on track. Your tailored safety and risk management plan can be delivered as an offline, customised desktop Risk Management Portal and mobile app.
+Managing safety in extreme environments begins in the planning stage and continues into the field. From risk management plans to detailed mapping, to innovative offline apps and real-life first aid training, Austere can highlight and mitigate areas of concern for your wilderness activities. Our experienced wilderness risk consultants will implement dynamic, functional and achievable plans to keep your team safe and the activity on track. Your tailored safety and risk management plan can be delivered as an offline, customised desktop Risk Management Portal and app.
 
 ## Emergency Planning
 Austere is often engaged to develop emergency plans for remote activities. The plans we produce are not ‘off the shelf’ plans, but rather are customised to the dates, region, weather, and nature of your activity. All plans are written to include primary and secondary options and involve consultation with local emergency services, rescue agencies, fixed and rotary-wing evacuation providers, and other relevant parties to ensure accuracy. Plans are also written in an easy to follow style for quick reference in the event of an emergency.
